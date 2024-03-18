@@ -20,5 +20,5 @@ Django Template
 
 安装Django包
 ```bash
-$pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/Django
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/Django
 ```
