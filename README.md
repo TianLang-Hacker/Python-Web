@@ -9,7 +9,7 @@ Python 3.12安装:
 
 Visual Studio Code安装:
 
-[Visual Studio Code官网](https://code.visualstudio.com/)
+[Visual Studio Code官网](https://code.visualstudio.com/Download)
 
 [Microsoft Store](https://apps.microsoft.com/detail/xp9khm4bk9fz7q)
 
