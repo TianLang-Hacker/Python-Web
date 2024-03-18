@@ -1,6 +1,19 @@
 # Python-Web
 Python Web环境搭建
 
+Python 3.12安装:
+
+[Python官网](https://www.python.org/downloads/)
+
+[Microsoft Store](https://apps.microsoft.com/detail/9ncvdn91xzqp)
+
+Visual Studio Code安装:
+
+[Visual Studio Code官网](https://code.visualstudio.com/)
+
+[Microsoft Store](https://apps.microsoft.com/detail/xp9khm4bk9fz7q)
+
+
 安装visual studio code 插件：
 ```bash
 Chinese
