@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>在线鸡算器</title>
+</head>
+<body>
+    <!-- div 主 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 空白 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+
+            </div>
+            <!-- 内容 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+                <!-- 两个输入框 -->
+            </br>
+            <!-- 16个按钮 -->
+            <div>
+
+            </div>
+            <!-- 两个按钮：清空、计算 -->
+            <div>
+                </br>
+                <button type="button" class="btn btn-success">清空</button>
+                <button type="button" class="btn btn-primary">鸡算</button>
+            </div>
+            </div>
+            <!-- 空白 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+            </div>
+
+        </div>
+    </div>
+    <!-- div  -->
+    <div class="extendContent"></div>
+</body>
+</html>

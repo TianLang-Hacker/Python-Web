@@ -1,0 +1,144 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>在线鸡算器</title>
+</head>
+<body>
+    <h1>在线鸡算器</h1>
+    <!-- div 主 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 空白 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+
+            </div>
+            <!-- 内容 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+                <!-- 两个输入框 -->
+                <input type="text" name="txt_code" id="txt_code" class="form-control input_show"  value="" placeholder="公式计算" disabled>
+                <input type="text" name="txt_result" id="txt_result" class="form-control input_show"  value="" placeholder="结果" disabled>
+            </br>
+            <!-- 16个按钮 -->
+            <div>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_7()">7</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_8()">8</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_9()">9</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_a()">/</button>
+                <br>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_4()">4</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_5()">5</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_6()">6</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_s()">*</button>
+                <br>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_1()">1</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_2()">2</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_3()">3</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_d()">-</button>
+                <br>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_0()">0</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_00()">00</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_g()">.</button>
+                <button type="button" class="btn btn-default btn_num" onclick="fun_f()">+</button>
+                <br>
+            </div>
+            <!-- 两个按钮：清空、计算 -->
+            <div>
+                </br>
+                <button type="button" class="btn btn-success btn-lg btn_clear" id="lgput_clear" onclick="fun_clear()">清空</button>
+                <button type="button" class="btn btn-primary btn-lg" id="lgbut_compute">鸡算</button>
+            </div>
+            </div>
+            <!-- 空白 -->
+            <div class="col-xs-1 col-sm-4 col-md-4 col-lg-4">
+            </div>
+
+        </div>
+    </div>
+    <!-- div  -->
+    <div class="extendContent">
+
+    </div>
+
+    <script>
+        var x=document.getElementById('txt_code')   //公式计算文本框
+        var y=document.getElementById('txt_result') //结果文本框
+        
+        function fun_7(){
+            x.value+='7';                           //单击按钮7
+        }
+        function fun_8(){
+            x.value+='8';                           //单击按钮8
+        }
+        function fun_9(){
+            x.value+='9';                           //单击按钮9
+        }
+        function fun_4(){
+            x.value+='4';                           //单击按钮4
+        }
+        function fun_5(){
+            x.value+='5';                           //单击按钮5
+        }
+        function fun_6(){
+            x.value+='6';                           //单击按钮6
+        }
+        function fun_1(){
+            x.value+='1';                           //单击按钮1
+        }
+        function fun_2(){
+            x.value+='2';                           //单击按钮2
+        }
+        function fun_3(){
+            x.value+='3';                           //单击按钮3
+        }
+        function fun_00(){
+            x.value+='00';                           //单击按钮00
+        }
+        function fun_0(){
+            x.value+='0';                           //单击按钮0
+        }
+        function fun_a(){
+            x.value+='/';                           //单击按钮/
+        }
+        function fun_s(){
+            x.value+='*';                           //单击按钮*
+        }
+        function fun_d(){
+            x.value+='-';                           //单击按钮-
+        }
+        function fun_f(){
+            x.value+='+';                           //单击按钮+
+        }
+        function fun_g(){
+            x.value+='.';                           //单击按钮.
+        }
+        function fun_clear(){
+            x.value=""
+            y.value=""
+        }
+    </script>
+    <script>
+        function ShowResult(data){
+            var y=document.getElementById('txt_result') //结果文本框
+            y.value=data['result']                      //data={'result' :result}
+        }
+    </script>
+    <script>
+        $('#lgbut_compute').click(function (){
+            $.ajax({
+                url:'/compute/',       //url.py
+                type:'POST',           //请求类型
+                data:{'code':$('#txt_code').val()} //计算公式文本框内的公式
+                dataType:'json',
+                success:ShowResult     //在请求成功之后调用该函数显示公式的计算结果
+            })
+        })
+    </script>
+</body>
+</html>
