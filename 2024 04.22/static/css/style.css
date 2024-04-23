@@ -1,0 +1,105 @@
+/* 设置整体的背景样式 */
+body {
+    /* background-image: url("../img/bg.jpg"); */
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+/* 页面头部：logo，电话，邮箱 */
+.top{
+    margin-top: 10px;
+}
+.phone{
+    color:#666;
+    float: right;
+}
+.mail{
+    color: #666;
+    float: right;
+}
+.ant:link{
+    text-decoration: none;
+}
+.ant:visited{
+    text-decoration: none;
+}
+.ant:hover{
+    text-decoration: none;
+}
+.ant:active{
+    text-decoration: none;
+}
+/*2导航栏*/
+.navbar-default{
+    margin-bottom: 0px;
+    border: 0px;
+    background-color: #e7e7e7;
+    margin-top: 30px;
+}
+/*导航栏栏目激活时属性*/
+.navbar-default .navbar-nav .active a,
+.navbar-default .navbar-nav .active a:hover,
+.navbar-default .navbar-nav .active a,:focus{
+    background-color: #005197;
+    color:#fff;
+}
+/*一级菜单光标移过时*/
+.navbar-default .navbar-nav li a:hover{
+    background-color: #005197;
+    color:#fff;
+}
+/*一级菜单单击展开时*/
+.navbar-default .navbar-nav li.open a:on{
+    background-color: #005197;
+    color:#fff;
+}
+/* 下拉菜单内边距 */
+.dropdown-menu{
+    padding: 0px;
+}
+/* 二级菜单标签 */
+.dropdown-menu li a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #777;
+    text-align: center;
+}
+/* 一级菜单宽度和文字对齐方式 */
+.nav-top{
+    width: 14%;
+    text-align: center;
+}
+/* 广告横幅--分割线 */
+.line{
+    height: 3px;
+    width: 100%;
+    background: #005197;
+}
+/* 页面主体 */
+.model-details-title{
+    padding: 15px 0px;
+    font-size: 18px;
+    border-bottom: 1px #005197 solid;
+    color:#005197;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.model-detail p{
+    line-height: 30px;
+    text-indent: 2em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+.model-detail img{
+    margin: 0px auto;
+}
+
+.web_footer{
+    width: 100%;
+    margin-top: 30px;
+}
